@@ -73,7 +73,7 @@
 		"@types/lodash.get": "4.4.6",
 		"@types/lodash.set": "4.3.6",
 		"@types/micromatch": "4.0.1",
-		"@types/prettier": "1.19.1",
+		"@types/prettier": "2.1.0",
 		"@typescript-eslint/eslint-plugin": "^2.25.0",
 		"@typescript-eslint/parser": "^2.25.0",
 		"eslint": "^6.8.0",
@@ -83,7 +83,7 @@
 		"eslint-plugin-simple-import-sort": "^5.0.2",
 		"jest": "25.2.3",
 		"jest-extended": "0.11.5",
-		"prettier": "2.0.2",
+		"prettier": "2.1.1",
 		"ts-jest": "25.2.1",
 		"typescript": "3.8.3"
 	}
