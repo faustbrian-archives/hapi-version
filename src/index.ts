@@ -1,4 +1,5 @@
 import { Server } from "@hapi/hapi";
+
 import { config } from "./config";
 import { onPreResponse } from "./events/pre-response";
 import { onRequest } from "./events/request";

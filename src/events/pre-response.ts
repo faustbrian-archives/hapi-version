@@ -1,7 +1,11 @@
 import Hapi from "@hapi/hapi";
+
 import { config } from "../config";
 
-export const onPreResponse = (request: Hapi.Request, h: Hapi.ResponseToolkit) => {
+export const onPreResponse = (
+	request: Hapi.Request,
+	h: Hapi.ResponseToolkit
+) => {
 	if (config.get("strategies.customHeader.enabled")) {
 		const headerName = config.get("strategies.customHeader.parameter");
 

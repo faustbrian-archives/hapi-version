@@ -6,10 +6,7 @@ export const schema = Joi.object({
 	/**
 	 * The base path used to build URIs.
 	 */
-	basePath: Joi.string()
-		.trim()
-		.min(1)
-		.default("/"),
+	basePath: Joi.string().trim().min(1).default("/"),
 	/**
 	 * The default version if none is requested.
 	 */
@@ -17,22 +14,15 @@ export const schema = Joi.object({
 		/**
 		 * The versions that are allowed to be requested.
 		 */
-		allowed: Joi.array()
-			.items(Joi.number().integer())
-			.min(1)
-			.default([1]),
+		allowed: Joi.array().items(Joi.number().integer()).min(1).default([1]),
 		/**
 		 * The default version if none is requested.
 		 */
-		default: Joi.any()
-			.valid(Joi.in("allowed"))
-			.default(1),
+		default: Joi.any().valid(Joi.in("allowed")).default(1),
 		/**
 		 * The type of version which is usually a number.
 		 */
-		type: Joi.string()
-			.valid("string", "number")
-			.default("number"),
+		type: Joi.string().valid("string", "number").default("number"),
 		/**
 		 * The method used to validate the version.
 		 */
@@ -59,21 +49,15 @@ export const schema = Joi.object({
 			/**
 			 * The name of the parameter that contains the version (non-IANA).
 			 */
-			parameter: Joi.string()
-				.trim()
-				.default("version"),
+			parameter: Joi.string().trim().default("version"),
 			/**
 			 * The Standards Tree that correlates to the type of project.
 			 */
-			standardsTree: Joi.string()
-				.trim()
-				.default("vnd"),
+			standardsTree: Joi.string().trim().default("vnd"),
 			/**
 			 * The subtype is typically a short name of your project, all lowercase.
 			 */
-			subType: Joi.string()
-				.trim()
-				.default("my-app"),
+			subType: Joi.string().trim().default("my-app"),
 		}).default(),
 		/**
 		 * The configuration for the custom header strategy.
@@ -86,9 +70,7 @@ export const schema = Joi.object({
 			/**
 			 * The name of the parameter that contains the version (non-IANA).
 			 */
-			parameter: Joi.string()
-				.trim()
-				.default("x-api-version"),
+			parameter: Joi.string().trim().default("x-api-version"),
 			/**
 			 * The regular expression used to match the version.
 			 */
@@ -105,9 +87,7 @@ export const schema = Joi.object({
 			/**
 			 * The name of the parameter that contains the version (non-IANA).
 			 */
-			parameter: Joi.string()
-				.trim()
-				.default("version"),
+			parameter: Joi.string().trim().default("version"),
 			/**
 			 * The regular expression used to match the version.
 			 */
@@ -124,9 +104,7 @@ export const schema = Joi.object({
 			/**
 			 * The name of the parameter that contains the version (non-IANA).
 			 */
-			parameter: Joi.string()
-				.trim()
-				.default("version"),
+			parameter: Joi.string().trim().default("version"),
 		}).default(),
 	}).default(),
 });
